@@ -1,0 +1,21 @@
+ANLEITUNG — Grund-Firmware hier ablegen
+========================================
+
+Diese App kann keine Firmware selbst kompilieren. Kompiliere sie einmal
+selbst mit PlatformIO, dann lege die Ausgabe-Dateien hier in diesen
+Ordner — die App findet sie danach automatisch bei "Board einrichten".
+
+So kompilierst du:
+1. PlatformIO installieren (VS Code + "PlatformIO IDE"-Erweiterung,
+   oder das eigenstaendige "pio" Kommandozeilen-Werkzeug).
+2. Den Firmware-Quellcode-Ordner (aus der von Claude gelieferten
+   ...-source.zip) in VS Code oeffnen.
+3. "pio run" ausfuehren (oder in VS Code auf das Haken-Symbol
+   "PlatformIO: Build" klicken).
+4. Im entstandenen Ordner ".pio/build/board/" liegen danach u.a.
+   "firmware.bin" und "littlefs.bin".
+5. Genau diese zwei Dateien hierher in diesen "firmware"-Ordner
+   kopieren (nicht umbenennen).
+
+Fertig — ab jetzt bietet "Board einrichten" diese Version automatisch
+als Ein-Klick-Option an.
